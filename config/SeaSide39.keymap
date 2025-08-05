@@ -41,8 +41,8 @@
 
         WIN {
             bindings = <
-&lt 6 Q  &kp W         &kp E         &kp R                        &kp T                                                 &kp Y        &kp U  &lt 7 I    &kp O       &kp P
-&kp A    &kp S         &kp D         &kp F                        &kp G                                                 &kp H        &kp J  &kp K      &kp L       &lt 5 MINUS
+&lt 7 Q  &kp W         &kp E         &kp R                        &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O       &kp P
+&kp A    &kp S         &kp D         &kp F                        &kp G                                                 &kp H        &kp J  &kp K      &kp L       &lt 4 MINUS
 &kp Z    &kp X         &kp C         &kp V                        &kp B                                                 &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SINGLE_QUOTE
 &kp TAB  &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 2 SPACE  &mt LEFT_SHIFT LANG1      &kp BACKSPACE  &lt 3 ENTER                                &kp SLASH
             >;
@@ -52,8 +52,8 @@
 
         MAC {
             bindings = <
-&lt 6 Q  &kp W             &kp E         &kp R                    &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A    &kp S             &kp D         &kp F                    &kp G                                                    &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
+&lt 7 Q  &kp W             &kp E         &kp R                    &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A    &kp S             &kp D         &kp F                    &kp G                                                    &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
 &kp Z    &kp X             &kp C         &kp V                    &kp B                                                    &kp N        &kp M  &kp COMMA  &kp DOT  &kp APOS
 &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_GUI LANGUAGE_2  &kp SPACE  &mt LEFT_SHIFT LANGUAGE_1      &kp BACKSPACE  &lt 3 ENTER                             &kp FSLH
             >;
@@ -77,6 +77,24 @@
             >;
         };
 
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &kp ENTER  &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
+            >;
+        };
+
         ARROW {
             bindings = <
 &kp ESCAPE      &mkp MB4                &kp UP_ARROW    &mkp MB5                 &trans                       &kp LG(LEFT_ARROW)          &kp LA(LEFT_ARROW)      &kp UP_ARROW    &kp RA(RIGHT_ARROW)      &kp RG(RIGHT_ARROW)
@@ -88,30 +106,12 @@
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans                      &trans  &mkp MB1  &mkp MB2  &mo 7   &trans
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
-            >;
-        };
-
         CONFIG {
             bindings = <
 &none         &bt BT_CLR    &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
 &win_btlayer  &mac_btlayer  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &bootloader  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                               &trans
-            >;
-        };
-
-        SCROLL {
-            bindings = <
-&trans  &trans  &kp ENTER  &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
             >;
         };
     };
