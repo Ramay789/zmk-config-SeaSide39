@@ -18,7 +18,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        task_view_combo {
+            bindings = <&task_view_macro>;
+            key-positions = <31 33 37 7>;
+        };
+    };
 
     macros {
         mac_btlayer: new_macro {
@@ -34,6 +41,13 @@
             bindings = <&to 0 &bt BT_SEL 0>;
             label = "WIN_BTLAYER";
         };
+
+        task_view_macro: task_view_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp TAB>;
+            label = "TASK_VIEW_MACRO";
+        };
     };
 
     keymap {
@@ -41,7 +55,7 @@
 
         WIN {
             bindings = <
-&lt 7 Q  &kp W         &kp E         &kp R                        &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O       &kp P
+&lt 7 Q  &kp W         &kp E         &kp R                        &kp T                                                 &kp Y        &kp U  &kp L      &kp O       &kp P
 &kp A    &kp S         &kp D         &kp F                        &kp G                                                 &kp H        &kp J  &kp K      &kp L       &lt 4 MINUS
 &kp Z    &kp X         &kp C         &kp V                        &kp B                                                 &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SINGLE_QUOTE
 &kp TAB  &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 2 SPACE  &mt LEFT_SHIFT LANG1      &kp BACKSPACE  &lt 3 ENTER                                &kp SLASH
