@@ -24,6 +24,7 @@
         task_view_combo {
             bindings = <&task_view_macro>;
             key-positions = <31 33 37 7>;
+            layers = <0>;
         };
     };
 
